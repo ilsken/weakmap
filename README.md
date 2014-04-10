@@ -4,6 +4,10 @@ weakmap
 Slim shim for WeakMap with non-leaky O(1) lookup time, based on polymer/WeakMap and [Benvie/WeakMap][weakmap]
 
 Uses the same basic method as [Benvie/WeakMap][weakmap] but with less code.
+# Why another shim?
+Mainly because the most [feature complete one][weakmap] added random properties to any object you used with it per weakmap you used it with. This does bad things for optimization since after a certain number of added properties v8 gives up and puts your object into slow hash-table mode. `ilsken/weakmap` stores all it's data for under one property (each weakmap then gets a key on this property, since it won't effect the optimization of the parent object).
+
+On top of that this one is only 40 lines and it's pretty easy to understand what's going on. I also kept any funny buisiness like monkey patching out of it
 
 # Differences from [Benvie/WeakMap][weakmap]
 - Faster, slimmer, easier to read code (just 40 lines!)
