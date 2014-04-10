@@ -1,0 +1,15 @@
+{
+  "name": "weakmap",
+  "repo": "ilsken/weakmap",
+  "description": "Slim shim for WeakMap with non-leaky O(1) lookup time, based on polymer/WeakMap and Benvie/WeakMap",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js",
+    "storage.js"
+  ]
+}
